@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content OS</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #1a1a1a;
+      background: #fafafa;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    header h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    header span {
+      font-size: 0.8rem;
+      color: #666;
+      font-weight: 400;
+    }
+
+    nav {
+      margin-left: auto;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      font-size: 0.875rem;
+      color: #444;
+      text-decoration: none;
+    }
+
+    nav a:hover { color: #000; }
+
+    .hero {
+      max-width: 680px;
+      margin: 5rem auto;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: #555;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #f0f0f0;
+      border-radius: 999px;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.75rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .features {
+      max-width: 680px;
+      margin: 0 auto 6rem;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+
+    .feature h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .feature p {
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    .legal {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 2rem 6rem;
+    }
+
+    .legal section {
+      margin-bottom: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    .legal h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .legal h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .legal p, .legal li {
+      font-size: 0.9rem;
+      color: #444;
+      margin-bottom: 0.75rem;
+    }
+
+    .legal ul {
+      padding-left: 1.25rem;
+    }
+
+    .legal .date {
+      font-size: 0.8rem;
+      color: #888;
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      background: #fff;
+      border-top: 1px solid #e5e5e5;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    footer a {
+      color: #555;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Content OS <span>Personal Publishing Tool</span></h1>
+  <nav>
+    <a href="#privacy">Privacy Policy</a>
+    <a href="#tos">Terms of Service</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="badge">Personal Use Only</div>
+    <h2>Automated video publishing for content creators</h2>
+    <p>
+      Content OS is a personal desktop application that automates the video
+      publishing workflow — from editing to multi-platform distribution — for
+      a single creator's own accounts.
+    </p>
+  </div>
+
+  <div class="features">
+    <div class="feature">
+      <h3>TikTok Integration</h3>
+      <p>Publishes rendered video files directly to the operator's own TikTok account via the official Content Posting API.</p>
+    </div>
+    <div class="feature">
+      <h3>Analytics Dashboard</h3>
+      <p>Pulls performance data (views, likes, shares) from connected accounts into a unified local dashboard.</p>
+    </div>
+    <div class="feature">
+      <h3>Self-Hosted</h3>
+      <p>Runs entirely on the operator's local machines. No cloud service, no third-party data storage.</p>
+    </div>
+  </div>
+
+  <div class="legal">
+
+    <!-- ===================== PRIVACY POLICY ===================== -->
+    <section id="privacy">
+      <h2>Privacy Policy</h2>
+      <p class="date">Effective date: March 27, 2025</p>
+
+      <p>
+        Content OS ("the Application") is a personal, self-hosted desktop tool
+        operated by a single individual for their own content publishing workflow.
+        This policy describes how data is handled.
+      </p>
+
+      <h3>Data collected</h3>
+      <p>
+        The Application accesses the following data from connected TikTok accounts
+        via the TikTok API, solely for the benefit of the account owner:
+      </p>
+      <ul>
+        <li>Basic profile information (username, display name) — used to confirm the correct account is connected</li>
+        <li>Video list and performance statistics (views, likes, comments, shares) — used to populate the local analytics dashboard</li>
+        <li>OAuth access and refresh tokens — stored locally on the operator's own machine</li>
+      </ul>
+
+      <h3>Data storage</h3>
+      <p>
+        All data is stored in a local PostgreSQL database on the operator's private
+        network. No data is transmitted to any third-party server. Tokens and
+        credentials are stored in local configuration files with restricted file
+        permissions.
+      </p>
+
+      <h3>Data sharing</h3>
+      <p>
+        No data collected through TikTok API access is shared with any third party,
+        sold, or used for advertising. The Application has no user base beyond the
+        single operator.
+      </p>
+
+      <h3>Data retention</h3>
+      <p>
+        Data is retained locally for as long as the operator chooses to keep it.
+        Revoking TikTok API access in the TikTok app settings will immediately
+        invalidate all stored tokens.
+      </p>
+
+      <h3>Contact</h3>
+      <p>
+        This is a personal tool with no public user base. For any questions,
+        contact the repository owner via GitHub.
+      </p>
+    </section>
+
+    <!-- ===================== TERMS OF SERVICE ===================== -->
+    <section id="tos">
+      <h2>Terms of Service</h2>
+      <p class="date">Effective date: March 27, 2025</p>
+
+      <p>
+        Content OS is a personal, self-hosted application intended for use by its
+        operator only. It is not a commercial product or public service.
+      </p>
+
+      <h3>Use</h3>
+      <p>
+        This Application is for personal use by its operator. It connects to
+        the operator's own TikTok account to automate video uploads and retrieve
+        analytics. It must not be used to access any TikTok account other than
+        the operator's own.
+      </p>
+
+      <h3>Compliance</h3>
+      <p>
+        The operator agrees to use this Application in compliance with TikTok's
+        Terms of Service and Developer Platform Terms. The Application will only
+        request API scopes strictly necessary for its described functionality.
+      </p>
+
+      <h3>No warranty</h3>
+      <p>
+        This Application is provided as-is for personal productivity. There is no
+        warranty of any kind. The operator assumes full responsibility for its use.
+      </p>
+
+      <h3>Changes</h3>
+      <p>
+        These terms may be updated at any time. Continued use of the Application
+        constitutes acceptance of any revised terms.
+      </p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <span>Content OS &mdash; Personal Use</span>
+  <a href="#privacy">Privacy Policy</a>
+  <a href="#tos">Terms of Service</a>
+</footer>
+
+</body>
+</html>
